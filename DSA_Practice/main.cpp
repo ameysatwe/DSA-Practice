@@ -6,9 +6,18 @@
 //
 
 #include <iostream>
+using namespace std;
+
+void fun(int n){
+    if(n>0){
+        cout<<n<<endl;
+        fun(n-1);
+    }
+}
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    // insert code here..
+    int x=3;
+    fun(x);
     return 0;
 }
