@@ -8,16 +8,18 @@
 #include <iostream>
 using namespace std;
 
-void fun(int n){
-    if(n>0){
-        cout<<n<<endl;
-        fun(n-1);
+int fun(int n)
+{
+    if (n > 0)
+    {
+        return fun(n - 1) + n;
     }
+    return 0;
 }
 
-int main(int argc, const char * argv[]) {
+int main(int argc, const char *argv[])
+{
     // insert code here..
-    int x=3;
-    fun(x);
+    cout << fun(5);
     return 0;
 }
