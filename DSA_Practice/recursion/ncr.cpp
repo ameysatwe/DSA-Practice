@@ -23,9 +23,17 @@ int ncr(int n, int r)
     return num / dem;
 }
 
+int NCR(int n, int r)
+{
+    if (n == r || r == 0)
+        return 1;
+    return NCR(n - 1, r - 1) + NCR(n - 1, r);
+}
+
 int main()
 {
 
-    printf("%d \n", ncr(4, 2));
+    printf("%d \n", ncr(5, 3));
+    printf("%d \n", NCR(5, 3));
     return 0;
 }
